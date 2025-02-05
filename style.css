@@ -1,0 +1,88 @@
+.gallery-container {
+	display: flex;
+	justify-content: center;
+	margin: 20px auto;
+}
+
+.thumbnails {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.thumbnails img {
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+
+.scrollbar {
+	width: 1px;
+	height: 720px;
+	background: #ccc;
+	display: block;
+	margin: 0 0 0 8px;
+}
+
+.thumb {
+	width: 1px;
+	position: absolute;
+	height: 0;
+	background: #000;
+}
+
+.slides {
+	margin: 0 10px;
+	display: grid;
+	grid-auto-flow: row;
+	gap: 1rem;
+	width: 100%;
+	padding: 0 20px;
+	height: 900px;
+	overflow-y: auto;
+	overscroll-behavior-y: contain;
+	scroll-snap-type: y mandatory;
+	scrollbar-width: none;
+	overflow-x: hidden;
+	justify-content: center;
+}
+
+.slides>div {
+	scroll-snap-align: start;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.slides img {
+	width: 200px;
+	height: 200px;
+	object-fit: fill;
+	padding: 20px;
+}
+
+.slides::-webkit-scrollbar {
+	display: none;
+}
+
+h1 {
+	text-align: center;
+	/* capitalize */
+	text-transform: uppercase;
+}
+
+.slide-text {
+	margin: 15px 16px;
+	padding: 20px 0px;
+	padding-top: 5px;
+	text-align: center;
+	margin-top: 5px;
+}
+
+body {
+	background-color: #191718;
+	font-family: "Mona Sans", serif;
+	color: #e9dec4;
+	font-size: 12px;
+}
